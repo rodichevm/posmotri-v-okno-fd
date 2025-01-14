@@ -159,8 +159,31 @@ html {
   line-height: 21px;
 }
 
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button:focus-visible {
+  outline: #fff solid 1px;
+  outline-offset: 1px;
+}
+
 .search-form__submit-button {
   align-self: self-end;
+}
+
+.more-button {
+  width: 390px;
+  margin: 30px 7px 2px 2px;
 }
 
 .content__details {
