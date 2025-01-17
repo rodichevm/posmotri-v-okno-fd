@@ -249,7 +249,7 @@ html {
 }
 
 .content__list-container {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .content__card-link {
