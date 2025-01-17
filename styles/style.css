@@ -142,14 +142,16 @@ html {
 }
 
 .search-form__pseudo-checkbox {
-  position: relative;
   border: #fff solid 1px;
   width: 19px;
   height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
 }
 
 .search-form__pseudo-checkbox::after {
-  position: absolute;
   content: "";
   width: 15px;
   height: 15px;
