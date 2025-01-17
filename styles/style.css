@@ -20,6 +20,7 @@ html {
 
 .page {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
@@ -38,8 +39,7 @@ html {
   align-items: end;
   gap: 30px;
   width: 100%;
-  padding: 0 30px;
-  margin-bottom: 258px;
+  padding: 133px 30px;
 }
 
 .result {
@@ -47,6 +47,7 @@ html {
 }
 
 .result__video-container {
+  position: relative;
   display: flex;
   width: 711px;
   height: 386px;
@@ -84,13 +85,12 @@ html {
   width: fit-content;
 }
 
-/*.search-form__label:has(:focus-visible) {*/
-/*  outline: #fff solid 1px;*/
-/*}*/
+.search-form__label:focus {
+  outline: none;
+}
 
-.search-form__checkbox-list .search-form__label:hover {
-  text-decoration: underline;
-  cursor: pointer;
+.search-form__label:has(:focus-visible) {
+  outline: #fff solid 1px;
 }
 
 .search-form__label-text {
@@ -110,15 +110,35 @@ html {
   border-top: #fff solid 1px;
   border-bottom: #fff solid 1px;
   appearance: none;
-  cursor: text;
   text-align: left;
+}
 
+.search-form__textfield:active {
+  outline: 1px solid #fff;
+}
+
+.search-form__textfield:hover {
+  cursor: text;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__checkbox-list {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+.search-form__checkbox-list .search-form__label:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .search-form__pseudo-checkbox {
@@ -202,6 +222,8 @@ html {
   line-height: 70px;
   text-transform: uppercase;
   text-align: left;
+  justify-items: start;
+  cursor: default;
 }
 
 .content__accent {
@@ -209,9 +231,19 @@ html {
 }
 
 .content__list {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.content__list-item {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.content__list-item:first-child {
+  padding-top: 2px;
 }
 
 .content__list-container {
@@ -227,6 +259,27 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.content__video-card:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.content__video-card:focus {
+  outline: none;
+}
+
+.content__video-card:focus-visible {
+  outline: #fff solid 1px;
+}
+
+.content__card-link_current .content__video-card{
+  background-color: #545050;
+}
+
+.content__list-item:focus-visible {
+  outline: #fff solid 1px;
 }
 
 .content__video-card-description-container {
@@ -258,6 +311,14 @@ html {
   height: 103px;
   object-fit: cover;
   object-position: center;
+}
+
+.preloader-template {
+  position: absolute;
+}
+
+.cards-list-item-template {
+  position: absolute;
 }
 
 h1,
