@@ -274,7 +274,7 @@ html {
   outline: #fff solid 1px;
 }
 
-.content__card-link_current .content__video-card{
+.content__card-link_current .content__video-card {
   background-color: #545050;
 }
 
@@ -314,11 +314,11 @@ html {
 }
 
 .preloader-template {
-  position: absolute;
+  position: relative;
 }
 
 .cards-list-item-template {
-  position: absolute;
+  position: relative;
 }
 
 h1,
