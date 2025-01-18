@@ -1,0 +1,1 @@
+git@github.com:rodichevm/posmotri-v-okno-fd.git
