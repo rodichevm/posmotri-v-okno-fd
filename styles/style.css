@@ -214,11 +214,6 @@ html {
   align-self: self-end;
 }
 
-.more-button {
-  width: 100%;
-  margin-top: 30px;
-}
-
 .content__details {
   display: flex;
   overflow-y: hidden;
@@ -246,6 +241,18 @@ html {
   position: relative;
   overflow-y: auto;
   height: 298px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgb(217 217 217 / 0.1);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9;
 }
 
 .content__list {
@@ -334,16 +341,7 @@ html {
   object-position: center;
 }
 
-/* Кастомный скроллбар */
-
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: rgb(217 217 217 / 0.1);
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+.more-button {
+  width: 100%;
+  margin-top: 30px;
 }
