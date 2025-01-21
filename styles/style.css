@@ -101,6 +101,7 @@ html {
   font-style: normal;
   line-height: 21px;
   margin-bottom: 5px;
+  cursor: default;
 }
 
 .search-form__label {
@@ -344,4 +345,9 @@ html {
 .more-button {
   width: 100%;
   margin-top: 30px;
+}
+
+.more-button:focus-visible {
+  width: calc(100% - 6px);
+  margin: 30px 2px 2px;
 }
